@@ -1,2 +1,12 @@
 # mern-boilerplate
-Minimalist boilerplace for a MERN application
+Minimalist boilerplate for a MERN application
+
+## Available commands:
+ - `npm start`
+ 
+## Tools/Frameworks:
+- `react`
+- `express`
+- `mongo`
+- `babel`
+- `webpack`
