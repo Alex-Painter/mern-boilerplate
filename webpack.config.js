@@ -5,27 +5,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
 	devtool: 'cheap-module-eval-source-map',
 
-	devServer: {
-		contentBase: './dist'
-	},
-
 	entry: [
-		      './client/index.js',
+    	'./client/index.js'
 	],
 
 	output: {
-			path: path.resolve(__dirname, 'dist'),
-			filename: '[name].[hash].js',
-			publicPath: '/'
+		path: path.resolve(__dirname, 'dist'),
+		filename: '[name].[hash].js',
+		publicPath: '/'
 	},
-
-	resolve: {
-    extensions: ['.js', '.jsx'],
-    modules: [
-      'client',
-      'node_modules',
-    ],
-  },	
 
 	module: {
 		rules: [
@@ -47,6 +35,10 @@ module.exports = {
 			        	presets: ['@babel/preset-env', '@babel/preset-react']
 			        }
 			     }
+			},
+			{
+		        test: /\.(jpe?g|gif|png|svg)$/i,
+		        loader: 'url-loader?limit=10000'
 			}
 		]
 	},
