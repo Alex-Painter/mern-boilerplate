@@ -1,6 +1,15 @@
 # mern-boilerplate
 Minimalist boilerplace for a MERN application
 
+## Available commands:
+ - `npm start`
+ 
+## Tools/Frameworks:
+- `react`
+- `express`
+- `mongo`
+- `babel`
+- `webpack`
 
 * create new directory structure
 * create client files (and paste content)
