@@ -7,6 +7,8 @@ const config = require('../webpack.config')
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const compiler = webpack(config);
 
+const db = require('./dbConfig');
+
 app.use(webpackDevMiddleware(compiler, {
 	noInfo: true,
 	publicPath: config.output.publicPath
