@@ -1,5 +1,7 @@
 # mern-boilerplate
-Minimalist boilerplace for a MERN application
+Minimalist boilerplace for a ERN application
+
+**This boilerplate does not contain any database integration, see other relevant branches `mern-boilerplate` (MongoDB) or `gern-boilerplate` (GraphQl)**
 
 ## Available commands:
  - `npm start`
@@ -7,7 +9,6 @@ Minimalist boilerplace for a MERN application
 ## Tools/Frameworks:
 - `react`
 - `express`
-- `mongo`
 - `babel`
 - `webpack`
 
