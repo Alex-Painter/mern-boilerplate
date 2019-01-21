@@ -27,3 +27,7 @@ Minimalist boilerplace for a MERN application
 ### Notes
 
 [`fsevents` error on non MACOS operating systems](https://stackoverflow.com/questions/46929196/how-to-solve-npm-install-throwing-fsevents-warning-on-non-mac-os)
+
+## TODO
+- Create version with GraphQL  
+- Create version with Typescript
