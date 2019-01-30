@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-	devtool: 'inline-source-map',
+	devtool: 'source-map',
 
 	entry: [
     	'./client/index.js'
@@ -15,21 +15,15 @@ module.exports = {
 		publicPath: '/'
 	},
 
+	resolve: {
+		extensions: [".ts", ".tsx", ".js", ".jsx"]
+	},
+
 	module: {
 		rules: [
 			{
-				test: /\.js|jsx$/,
-				exclude: '/node_modules/',
-				use: {
-			        loader: 'babel-loader',
-			        options: {
-			        	presets: ['@babel/preset-env', '@babel/preset-react']
-			        }
-			     }
-			},
-			{
-				test: /\.tsx?$/,
-				use: 'ts-loader',
+				test: /\.(t|j)sx?$/,
+				use: 'awesome-typescript-loader',
 				exclude: '/node_modules/'
 			},
 			{
@@ -44,8 +38,16 @@ module.exports = {
 			{
 		        test: /\.(jpe?g|gif|png|svg)$/i,
 		        loader: 'url-loader?limit=10000'
+			},
+			{
+				enforce: "pre", test: /\.js$/, loader: "source-map-loader"
 			}
 		]
+	},
+
+	externals: {
+		"react": "React",
+		"react-dom": "ReactDOM"
 	},
 
 	plugins: [

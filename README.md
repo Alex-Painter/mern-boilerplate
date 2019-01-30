@@ -8,6 +8,7 @@ Minimalist boilerplace for a ERN application
  
 ## Tools/Frameworks:
 - `react`
+- `typescript`
 - `express`
 - `babel`
 - `webpack`

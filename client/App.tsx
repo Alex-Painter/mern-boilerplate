@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-require('./App.css');
+import * as React from 'react';
+import * as logo from './logo.svg';
+import * from "./App.css";
 
-class App extends Component {
+class App extends React.Component<{}, {}> {
   render() {
     return (
       <div className="App">
