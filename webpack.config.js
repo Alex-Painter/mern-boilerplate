@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-	devtool: 'cheap-module-eval-source-map',
+	devtool: 'inline-source-map',
 
 	entry: [
     	'./client/index.js'
@@ -18,15 +18,6 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.css$/,
-				exclude: '/node_modules/',
-				use: [
-					{ loader: "style-loader" },
-					{ loader: "css-loader" }
-				]
-
-			},
-			{
 				test: /\.js|jsx$/,
 				exclude: '/node_modules/',
 				use: {
@@ -35,6 +26,20 @@ module.exports = {
 			        	presets: ['@babel/preset-env', '@babel/preset-react']
 			        }
 			     }
+			},
+			{
+				test: /\.tsx?$/,
+				use: 'ts-loader',
+				exclude: '/node_modules/'
+			},
+			{
+				test: /\.css$/,
+				exclude: '/node_modules/',
+				use: [
+					{ loader: "style-loader" },
+					{ loader: "css-loader" }
+				]
+
 			},
 			{
 		        test: /\.(jpe?g|gif|png|svg)$/i,
